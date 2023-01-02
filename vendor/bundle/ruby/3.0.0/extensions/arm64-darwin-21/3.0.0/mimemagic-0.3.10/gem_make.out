@@ -1,0 +1,3 @@
+current directory: /Users/inoueshingo/workspace/dev-exam-rails6/vendor/bundle/ruby/3.0.0/gems/mimemagic-0.3.10/ext/mimemagic
+/Users/inoueshingo/.rbenv/versions/3.0.1/bin/ruby -I/Users/inoueshingo/.rbenv/versions/3.0.1/lib/ruby/3.0.0 -rrubygems /Users/inoueshingo/workspace/dev-exam-rails6/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/Users/inoueshingo/workspace/dev-exam-rails6/vendor/bundle/ruby/3.0.0/extensions/arm64-darwin-21/3.0.0/mimemagic-0.3.10 RUBYLIBDIR\=/Users/inoueshingo/workspace/dev-exam-rails6/vendor/bundle/ruby/3.0.0/extensions/arm64-darwin-21/3.0.0/mimemagic-0.3.10
+mkdir -p /Users/inoueshingo/workspace/dev-exam-rails6/vendor/bundle/ruby/3.0.0/extensions/arm64-darwin-21/3.0.0/mimemagic-0.3.10/mimemagic
