@@ -1,0 +1,33 @@
+<h1>閲覧</h1>
+
+<div class="property">
+<p>物件名: <%= @property.property %></p>
+<p>賃料: <%= @property.rent %></p>
+<p>住所: <%= @property.adress %></p>
+<p>築年数: <%= @property.age %></p>
+<p>備考: <%= @property.remarks %></p>
+</div>
+
+<div class="access">
+<h3>最寄り駅1</h3>
+<p>路線名: <%= @access.line %></p>
+<p>駅名: <%= @access.station %></p>
+<p>徒歩分数: <%= @access.distance %></p>
+</div>
+
+<div class="access">
+<h3>最寄り駅2</h3>
+<p>路線名: <%= @access.line  %></p>
+<p>駅名: <%= @access.station %></p>
+<p>徒歩分数: <%= @access.distance %></p>
+</div>
+
+<h1>GeekTwitter</h1>
+<h3>Tweet詳細</h3>
+<div class="tweet">
+  <p><%= @tweet.body %></p>
+  <p><%= @tweet.created_at %></p>
+</div>
+
+<%= link_to "編集", tweets_path %>
+<%= link_to "戻る", tweets_path %>
