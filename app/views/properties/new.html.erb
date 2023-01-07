@@ -1,4 +1,5 @@
 <h1>物件登録</h1>
+
 <%= form_with(model: @property, local: true) do |f| %>
   <%= f.label :property, '物件名' %><br>
   <%= f.text_field :property %><br>
@@ -14,23 +15,23 @@
   <hr>
 
   <h4>最寄り駅1</h4>
-  <%= f.fields_for :access1 do |ns1| %>
-    <%= ns1.label :line, '路線名' %><br>
-    <%= ns1.text_field :line %><br>
-    <%= ns1.label :station, '駅名' %><br>
-    <%= ns1.text_field :station %><br>
-    <%= ns1.label :distance, '徒歩分数' %><br>
-    <%= ns1.text_field :distance %>分<br>
+  <%= f.fields_for :access1 do |a1| %>
+    <%= a1.label :line, '路線名' %><br>
+    <%= a1.text_field :line %><br>
+    <%= a1.label :station, '駅名' %><br>
+    <%= a1.text_field :station %><br>
+    <%= a1.label :distance, '徒歩分数' %><br>
+    <%= a1.text_field :distance %>分<br>
   <% end %>
 
   <h4>最寄り駅2</h4>
-  <%= f.fields_for :access2 do |ns2| %>
-    <%= ns2.label :line, '路線名' %><br>
-    <%= ns2.text_field :line %><br>
-    <%= ns2.label :station, '駅名' %><br>
-    <%= ns2.text_field :station %><br>
-    <%= ns2.label :distance, '徒歩分数' %><br>
-    <%= ns2.text_field :distance %>分<br>
+  <%= f.fields_for :access2 do |a2| %>
+    <%= a2.label :line, '路線名' %><br>
+    <%= a2.text_field :line %><br>
+    <%= a2.label :station, '駅名' %><br>
+    <%= a2.text_field :station %><br>
+    <%= a2.label :distance, '徒歩分数' %><br>
+    <%= a2.text_field :distance %>分<br>
   <% end %>
   <%= f.submit '登録する' %><br>
 <% end %>

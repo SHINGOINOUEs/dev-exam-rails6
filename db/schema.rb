@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_02_060119) do
+ActiveRecord::Schema.define(version: 2023_01_07_103033) do
 
   create_table "accesses", force: :cascade do |t|
     t.string "line"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2023_01_02_060119) do
     t.integer "distance"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "property_id", null: false
+    t.index ["property_id"], name: "index_accesses_on_property_id"
   end
 
   create_table "properties", force: :cascade do |t|
@@ -30,4 +32,5 @@ ActiveRecord::Schema.define(version: 2023_01_02_060119) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "accesses", "properties"
 end

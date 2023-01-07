@@ -1,33 +1,55 @@
+<p id="notice"><%= notice %></p>
+
 <h1>閲覧</h1>
 
-<div class="property">
-<p>物件名: <%= @property.property %></p>
-<p>賃料: <%= @property.rent %></p>
-<p>住所: <%= @property.adress %></p>
-<p>築年数: <%= @property.age %></p>
-<p>備考: <%= @property.remarks %></p>
-</div>
+<p>
+  <strong>物件名:</strong>
+  <%= @property.property %>
+</p>
 
-<div class="access">
-<h3>最寄り駅1</h3>
-<p>路線名: <%= @access.line %></p>
-<p>駅名: <%= @access.station %></p>
-<p>徒歩分数: <%= @access.distance %></p>
-</div>
+<p>
+  <strong>賃料:</strong>
+  <%= @property.rent %>
+</p>
 
-<div class="access">
-<h3>最寄り駅2</h3>
-<p>路線名: <%= @access.line  %></p>
-<p>駅名: <%= @access.station %></p>
-<p>徒歩分数: <%= @access.distance %></p>
-</div>
+<p>
+  <strong>住所:</strong>
+  <%= @property.address %>
+</p>
 
-<h1>GeekTwitter</h1>
-<h3>Tweet詳細</h3>
-<div class="tweet">
-  <p><%= @tweet.body %></p>
-  <p><%= @tweet.created_at %></p>
-</div>
+<p>
+  <strong>築年数:</strong>
+  <%= @property.age %>
+</p>
 
-<%= link_to "編集", tweets_path %>
-<%= link_to "戻る", tweets_path %>
+<p>
+  <strong>備考:</strong>
+  <%= @property.remarks %>
+</p>
+<% @property.accesses.each do |accesses| %>
+<hr>
+<% number = 0 %>
+<h2>最寄駅<% number += 1 %></h2>
+　　<p>
+　　　　<strong>路線名:</strong>
+　　　　<%= @access.line %>
+　　　　<%= access.line %>
+  </p>
+  <p>
+      <strong>駅名:</strong>
+      <%= @access.station %>
+      <%= access.station %>
+  </p>
+  <p>
+    <strong>徒歩分数:</strong>
+    <%= @access.distance %>
+    <%= access.distance %>
+  </p>
+
+  <% end %>
+
+  <%= link_to '編集する', edit_property_path(@property) %> |
+  <%= link_to '戻る', properties_path %>
+
+
+
