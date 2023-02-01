@@ -1,4 +1,4 @@
 class Property < ApplicationRecord
-  has_many :access 
-  accepts_nested_attributes_for :access 
+  has_many :accesses 
+  accepts_nested_attributes_for :accesses 
 end
